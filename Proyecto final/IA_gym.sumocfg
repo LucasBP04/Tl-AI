@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-11-16T14:48:56.126809-07:00 by Eclipse SUMO sumo 1.25.0
+-->
+
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <configuration>
+        <configuration-file value=""/>
+    </configuration>
+
+    <input>
+        <net-file value="Mi_red.net.xml"/>
+        <route-files value="IA%20gym.rou.xml"/>
+    </input>
+
+    <gui_only>
+        <edgedata-files value=""/>
+    </gui_only>
+
+</sumoConfiguration>

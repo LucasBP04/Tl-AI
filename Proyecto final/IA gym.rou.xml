@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <!-- Tipo de vehículo -->
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" maxSpeed="20" length="5"/>
+
+    <!-- Rutas principales del cruce -->
+    <route id="norte_a_oeste" edges="-E4 -E3"/>
+    <route id="norte_a_sur" edges="-E4 -E6.0"/>
+    <route id="norte_a_este" edges="-E4 -E5"/>
+
+    <!-- 2) Desde el OESTE (E3) -->
+    <route id="oeste_a_sur" edges="E3 -E6.0"/>
+    <route id="oeste_a_este" edges="E3 -E5"/>
+    <route id="oeste_a_norte" edges="E3 E4"/>
+
+    <!-- 3) Desde el ESTE (E5) -->
+    <route id="este_a_norte" edges="E5 E4"/>
+    <route id="este_a_oeste" edges="E5 -E3"/>
+    <route id="este_a_sur" edges="E5 -E6.0"/>
+
+    <!-- 4) Desde el SUR (E6.0) -->
+    <route id="sur_a_este" edges="E6.0 -E5"/>
+    <route id="sur_a_norte" edges="E6.0 E4"/>
+    <route id="sur_a_oeste" edges="E6.0 -E3"/>
+
+    <!-- Flujos (trafico) -->
+    <flow id="flujo_norte_oeste" type="car" route="norte_a_oeste"
+          begin="0" end="1800" period="10"/>
+    <flow id="flujo_norte_sur" type="car" route="norte_a_sur"
+          begin="0" end="1800" period="8"/>
+    <flow id="flujo_norte_este" type="car" route="norte_a_este"
+          begin="0" end="1800" period="12"/>
+
+    <!-- OESTE -->
+    <flow id="flujo_oeste_sur" type="car" route="oeste_a_sur"
+          begin="0" end="1800" period="9"/>
+    <flow id="flujo_oeste_este" type="car" route="oeste_a_este"
+          begin="0" end="1800" period="7"/>
+    <flow id="flujo_oeste_norte" type="car" route="oeste_a_norte"
+          begin="0" end="1800" period="11"/>
+
+    <!-- ESTE -->
+    <flow id="flujo_este_norte" type="car" route="este_a_norte"
+          begin="0" end="1800" period="8"/>
+    <flow id="flujo_este_oeste" type="car" route="este_a_oeste"
+          begin="0" end="1800" period="6"/>
+    <flow id="flujo_este_sur" type="car" route="este_a_sur"
+          begin="0" end="1800" period="10"/>
+
+    <!-- SUR -->
+    <flow id="flujo_sur_este" type="car" route="sur_a_este"
+          begin="0" end="1800" period="9"/>
+    <flow id="flujo_sur_norte" type="car" route="sur_a_norte"
+          begin="0" end="1800" period="7"/>
+    <flow id="flujo_sur_oeste" type="car" route="sur_a_oeste"
+          begin="0" end="1800" period="11"/>
+</routes>
